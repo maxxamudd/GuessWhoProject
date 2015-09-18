@@ -1,0 +1,6 @@
+D:\Programming\C#\Guess Who Solution\Guess Who Project\bin\Debug\Guess Who Project.exe.config
+D:\Programming\C#\Guess Who Solution\Guess Who Project\bin\Debug\Guess Who Project.exe
+D:\Programming\C#\Guess Who Solution\Guess Who Project\bin\Debug\Guess Who Project.pdb
+D:\Programming\C#\Guess Who Solution\Guess Who Project\obj\Debug\Guess Who Project.csprojResolveAssemblyReference.cache
+D:\Programming\C#\Guess Who Solution\Guess Who Project\obj\Debug\Guess Who Project.exe
+D:\Programming\C#\Guess Who Solution\Guess Who Project\obj\Debug\Guess Who Project.pdb
