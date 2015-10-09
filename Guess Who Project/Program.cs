@@ -14,6 +14,29 @@ namespace Guess_Who_Project
     {
         static void Main(string[] args)
         {
+            // create and populate list populate list
+            List<Person> people = new List<Person>();
+            people = createList();
+
+            // randomly select a mystery person
+            int pick = 0;
+            pick = pickPerson(people);
+            Person mysteryPerson = new Person(people[pick].Name, people[pick].IsMale, 
+                people[pick].IsFemale, people[pick].HairColor, people[pick].EyeColor);
+
+            // greet user, display rules
+            displayGreeting();
+
+            int guesses = 0;
+            bool win = false;
+            while (win == false)
+            {
+                // get user choice
+               win = getQuestion(ref people, mysteryPerson, ref guesses);
+            }
+        }
+        public static void setConsoleSize()
+        {
             // get screen height
             var screenHeight = SystemInformation.VirtualScreen.Height;
 
@@ -31,7 +54,9 @@ namespace Guess_Who_Project
             {
                 // do not set console size for lower resolutions
             }
-
+        }
+        public static List<Person> createList()
+        {
             // people objects
             Person Jenny = new Person("Jenny", false, true, "Brown", "Brown");
             Person David = new Person("David", true, false, "Brown", "Brown");
@@ -73,22 +98,7 @@ namespace Guess_Who_Project
             people.Add(Sarah);
             people.Add(Jason);
 
-            // randomly select a mystery person
-            int pick = 0;
-            pick = pickPerson(people);
-            Person mysteryPerson = new Person(people[pick].Name, people[pick].IsMale, 
-                people[pick].IsFemale, people[pick].HairColor, people[pick].EyeColor);
-
-            // greet user, display rules
-            displayGreeting();
-
-            int guesses = 0;
-            bool win = false;
-            while (win == false)
-            {
-                // get user choice
-               win = getQuestion(ref people, mysteryPerson, ref guesses);
-            }
+            return people;
         }
         public static int pickPerson(List<Person> people)
         {
@@ -122,6 +132,7 @@ namespace Guess_Who_Project
             {
                 Console.Write("*");
             }
+
             Console.WriteLine("\nI have chosen a mystery person, and you have to figure out who it is!");
             Console.WriteLine("You can ask me questions about this person's hair color, eye color, and gender.");
             Console.WriteLine("Once you have enough information, make a guess!\n");
