@@ -1,2 +1,4 @@
 # GuessWhoProject
-This is my version of the classic Milton Bradley game Guess Who.
+c# This is my version of the classic Milton Bradley game Guess Who.
+
+Demonstrates skills in object manipulation, loops, and creating functions.
